@@ -320,9 +320,62 @@
 	  'format': 'm/d/yyyy',
 	  'autoclose': true
 	});
-
-
-
-
 })(jQuery);
 
+function openModal() {
+	document.getElementById('serviceForm').style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+	document.getElementById('serviceForm').style.display = "none";
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+	if (event.target === document.getElementById('serviceForm')) {
+		closeModal();
+	}
+}
+ // Function to open the modal
+ function openModal() {
+	document.getElementById('serviceForm').style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+	document.getElementById('serviceForm').style.display = "none";
+}
+
+// Open modal when the button is clicked
+document.getElementById('openModalBtn').onclick = openModal;
+
+// Open modal on page load
+window.onload = function() {
+	openModal();
+};
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+	if (event.target === document.getElementById('serviceForm')) {
+		closeModal();
+	}
+}
+function openModal() {
+	document.getElementById('serviceForm').style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+	document.getElementById('serviceForm').style.display = "none";
+}
+
+// Open modal after 5 seconds
+setTimeout(openModal, 5000);
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+	if (event.target === document.getElementById('serviceForm')) {
+		closeModal();
+	}
+}

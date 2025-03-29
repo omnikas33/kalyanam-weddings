@@ -68,7 +68,7 @@
         <div class="row">
             <!-- Photographer -->
             <div class="col-md-4 mb-4">
-                <div class="service-card">
+                <div class="service-card" onclick="openModal()">
                     <img src="./images/services/p1.avif" alt="Photographer" class="service-image img-fluid">
                     <div class="p-3">
                         <h5 class="service-title">Photographers</h5>
@@ -264,73 +264,6 @@
       </div>
       </section>
   
-		<!-- <section class="ftco-section bg-light">
-    	<div class="container">
-    		<div class="row justify-content-start mb-5 pb-2">
-          <div class="col-md-4 heading-section ftco-animate">
-          	<span class="subheading subheading-with-line"><small class="pr-2 bg-light">Projects</small></span>
-            <h2 class="mb-4">Done Projects</h2>
-          </div>
-          <div class="col-md-8 pl-md-5 heading-section ftco-animate">
-          	<div class="pl-md-4 border-line">
-	          	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-          	</div>
-          </div>
-        </div>
-    	</div>
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-6 col-lg-3 ftco-animate">
-    				<div class="project">
-	    				<img src="images/work-1.jpg" class="img-fluid" alt="Colorlib Template">
-	    				<div class="text">
-	    					<span>Interior Design</span>
-	    					<h3><a href="project.html">Office Interior Design</a></h3>
-	    				</div>
-	    				<a href="images/work-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
-	    				</a>
-    				</div>
-    			</div>
-    			<div class="col-md-6 col-lg-3 ftco-animate">
-    				<div class="project">
-	    				<img src="images/work-2.jpg" class="img-fluid" alt="Colorlib Template">
-	    				<div class="text">
-	    					<span>Interior Design</span>
-	    					<h3>Office Interior Design</h3>
-	    				</div>
-	    				<a href="images/work-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
-	    				</a>
-    				</div>
-    			</div>
-    			<div class="col-md-6 col-lg-3 ftco-animate">
-    				<div class="project">
-	    				<img src="images/work-3.jpg" class="img-fluid" alt="Colorlib Template">
-	    				<div class="text">
-	    					<span>Interior Design</span>
-	    					<h3>Office Interior Design</h3>
-	    				</div>
-	    				<a href="images/work-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
-	    				</a>
-    				</div>
-    			</div>
-    			<div class="col-md-6 col-lg-3 ftco-animate">
-    				<div class="project">
-	    				<img src="images/work-4.jpg" class="img-fluid" alt="Colorlib Template">
-	    				<div class="text">
-	    					<span>Interior Design</span>
-	    					<h3>Office Interior Design</h3>
-	    				</div>
-	    				<a href="images/work-4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
-	    				</a>
-    				</div>
-    			</div>
-    	</div>
-    </section> -->
-    
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
           <div class="row mb-5">
@@ -392,9 +325,43 @@
           </div>
       </div>
   </footer>    
-  
 
-  <!-- loader -->
+
+
+  <div id="serviceForm" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Service Inquiry</h2>
+        <form id="inquiryForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="service">Service:</label>
+                <select class="form-control" id="service" name="service" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="Photographers">Photographers</option>
+                    <option value="Makeup Artists">Makeup Artists</option>
+                    <option value="Bridal and Groom Wear">Bridal and Groom Wear</option>
+                    <option value="Pandits">Pandits</option>
+                    <option value="Mehendi Artists">Mehendi Artists</option>
+                    <option value="Invites and Gifts">Invites and Gifts</option>
+                    <option value="Music and Dance">Music and Dance</option>
+                    <option value="Catering">Catering</option>
+                </select>
+            </div>
+            <input type="hidden" name="_replyto" value="YOUR_EMAIL@example.com"> <!-- Optional: Set reply-to email -->
+            <input type="hidden" name="_subject" value="New Service Inquiry"> <!-- Optional: Set email subject -->
+            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+        </form>
+    </div>
+</div>
+<!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
