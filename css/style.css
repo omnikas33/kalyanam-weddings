@@ -474,6 +474,31 @@ pre {
   margin-right: -15px;
   margin-left: -15px; }
 
+  .logo{
+    width: 95px;
+    height: 65px;
+
+  }
+  .whatsapp-link {
+    color: #007bff; /* Initial color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.whatsapp-link:hover {
+    color: #28a745; /* Change color on hover */
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blinking-link {
+  color: #5eacff !important; /* Initial color */
+  text-decoration: none; /* Remove underline */
+  animation: blink 1s infinite; /* Blinking animation */
+}
 .no-gutters {
   margin-right: 0;
   margin-left: 0; }
